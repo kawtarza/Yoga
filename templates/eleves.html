@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{%  block content %}
+
+{% for eleve in eleves %}
+<h1><a href="{{url_for('showeleves', id=loop.index - 1) }}"> {{ eleve['prenom'] }} </a></h1>
+{% endfor %}
+
+{% endblock %}

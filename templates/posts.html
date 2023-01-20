@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{%  block content %}
+
+{% for post in posts %}
+<h1><a href="{{url_for('show', id=loop.index - 1) }}"> {{ post ['title'] }} </a></h1>
+
+           
+{% endfor %}
+
+{% endblock %}
